@@ -1,0 +1,33 @@
+sila wants to know how the Arithmetic operators are performing in programming.could you please help her to learn the Arithmetic calculation.
+
+Input Format
+
+First input consist of integer
+second input consist of integer
+Constraints
+
+No Constraints
+
+Output Format
+
+execute the Arithmetic calculation values.
+Sample Input 0
+
+45
+7
+Sample Output 0
+
+Addition=52
+Subtraction=38
+Multiplication=315
+Division=6
+Modulo=3
+
+# Enter your code here. Read input from STDIN. Print output to STDOU
+x=int(input())
+y=int(input())
+print(f"Addition={x+y}")
+print(f"Subtraction={x-y}")
+print(f"Multiplication={x*y}")
+print(f"Division={x//y}")
+print(f"Modulo={x%y}")
