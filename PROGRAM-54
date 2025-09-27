@@ -1,0 +1,53 @@
+Write a program to find the maximum element in an array.
+
+Input Format
+
+Input consists of 1 integer and 1 array. Integer corresponds to the size of the array.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Find max value in the array.
+
+Sample Input 0
+
+4
+67
+33
+89
+45
+Sample Output 0
+
+Max=89
+Sample Input 1
+
+7
+9
+14
+23
+2
+11
+4
+6
+Sample Output 1
+
+Max=23
+Contest ends in a month
+Submissions: 1
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+
+
+n=int(input())
+arr=[]
+for i in range(n):
+    arr.append(int(input()))
+max_value=max(arr)
+print(f"Max={max_value}")
