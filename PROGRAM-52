@@ -1,0 +1,39 @@
+Write a program to reverse an array.
+
+Input Format
+
+Input consists of 1 integer and 1 array.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+The first integer corresponds to the size of the array.
+
+Sample Input 0
+
+5
+1
+2
+3
+4
+5
+Sample Output 0
+
+Reversed array is:
+5
+4
+3
+2
+1
+
+n=int(input())
+arr=[]
+for i in range(n):
+    arr.append(int(input()))
+rev=arr[::-1]
+print("Reversed array is:")
+for m in rev:
+    print(m)
