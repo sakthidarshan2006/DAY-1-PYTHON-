@@ -1,0 +1,52 @@
+Write the program to execute the pattern.
+
+Input Format
+
+Input consists of Single integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the Pattern.
+
+Sample Input 0
+
+7
+Sample Output 0
+
+*************
+ *AAAAAAAAA*
+  *BBBBBBB*
+   *CCCCC*
+    *DDD*
+     *E*
+      *
+Sample Input 1
+
+8
+Sample Output 1
+
+***************
+ *AAAAAAAAAAA*
+  *BBBBBBBBB*
+   *CCCCCCC*
+    *DDDDD*
+     *EEE*
+      *F*
+       *
+
+n = int(input().strip())
+print("*" * (2 * n - 1))
+ch = ord('A')
+for i in range(1, n):           
+    spaces = " " * i
+    letters_count = 2 * (n - i) - 1
+    if letters_count > 1:
+        print(spaces + "*" + chr(ch) * (letters_count - 2) + "*")
+        ch += 1
+    else:
+        print(spaces + "*")
+        break
