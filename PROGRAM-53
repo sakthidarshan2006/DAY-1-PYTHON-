@@ -1,0 +1,41 @@
+Sheela wants to find the common data in the two different lists. Could you please help to find it and implement the program. Both lists are non Duplicate data
+
+Note-if the data are not found from the list return the Statement Data Not found.
+
+Input Format
+
+First Input Corresponds to the array size. Second Input Corresponds to the array elements of arr1. Third Input corresponds to the array elements of arr2.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Find the common datas from the two lists.
+
+Sample Input 0
+
+4
+a b e f
+e d h a
+Sample Output 0
+
+The Common data are a e
+Sample Input 1
+
+4
+m o d g
+a b c e
+Sample Output 1
+
+Data Not Found
+
+n = int(input())
+arr1 = input().split()
+arr2 = input().split()
+common = set(arr1) & set(arr2)
+if common:
+    print("The Common data are", *sorted(common))
+else:
+    print("Data Not Found")
