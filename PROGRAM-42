@@ -1,0 +1,58 @@
+To speed up his composition of generating unpredictable rhythms, Blue Bandit wants the list of prime numbers available in a range of numbers. Can you help him out?
+
+Write a program to print all prime numbers in the interval [a,b] (a and b, both inclusive).
+
+Note
+
+Input 1 should be lesser than Input 2. Both the inputs should be positive. Range must always be greater than zero. If any of the condition mentioned above fails, then display “Provide valid input” Use a minimum of one for loop and one while loop
+
+Input Format
+
+Get to integer value from the user
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the prime series
+
+Sample Input 0
+
+34
+78
+Sample Output 0
+
+37 41 43 47 53 59 61 67 71 73
+Sample Input 1
+
+33
+11
+Sample Output 1
+
+Provide valid input
+
+a = int(input())
+b = int(input())
+if a <= 0 or b <= 0:
+    print("Provide valid input")
+elif a >= b:
+    print("Provide valid input")
+else:
+    primes = []
+    for num in range(a, b + 1):
+        if num > 1:
+            is_prime = True
+            i = 2
+            while i * i <= num:
+                if num % i == 0:
+                    is_prime = False
+                    break
+                i += 1
+            if is_prime:
+                primes.append(str(num))
+    if primes:
+        print(" ".join(primes))
+    else:
+        print("No prime numbers in the given range")
