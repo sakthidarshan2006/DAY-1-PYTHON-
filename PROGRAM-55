@@ -1,0 +1,39 @@
+Pravin wants to give a surprise to his girlfriend on Valentine's Day. So he decided to give a rose to his girlfriend. He got the Valentine's surprise gift box. In that box, Each section has Multiple roses that are mentioned with some numbers. He needs to choose the best one from the gift box for his girlfriend. so the condition of choosing the rose is mentioned the rose number should be a double-digit integer and at the same time it should be a maximum number of the Integer.
+
+Note - If he didnt find any roses from the box return the statement as "Roses are not Found".
+
+Input Format
+
+First Input Corresponds to no of rose in the box. Second Input Corresponds to numbers mentioned in each rose section. 
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Find the best roses from the box to surprise her girlfriend.
+
+Sample Input 0
+
+6
+9 15 6 167 55 34
+Sample Output 0
+
+The rose he chose from the box is 55
+Sample Input 1
+
+7
+8 764 678 9 222 7 2 
+Sample Output 1
+
+Roses are not Found
+
+n = int(input())
+numbers = list(map(int, input().split()))
+double_digit = [num for num in numbers if 10 <= num <= 99]
+if double_digit:
+    best_rose = max(double_digit)
+    print(f"The rose he chose from the box is {best_rose}")
+else:
+    print("Roses are not Found")
