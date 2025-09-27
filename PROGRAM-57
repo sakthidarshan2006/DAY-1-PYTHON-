@@ -1,0 +1,36 @@
+In this program, we will learn how to find the mean of an array. Here, we are reading N elements and finding their mean element.
+
+Input Format
+
+The first input consists of an array size.
+
+The Second input consists of elements of an array.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Find the Mean Value of an array.
+
+Sample Input 0
+
+5
+9 4 1 2 3
+Sample Output 0
+
+Mean:3.80
+Sample Input 1
+
+4
+9 7 2 5
+Sample Output 1
+
+Mean:5.75
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+mean = sum(arr) / n
+print(f"Mean:{mean:.2f}")
