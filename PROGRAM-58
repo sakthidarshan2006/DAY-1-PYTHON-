@@ -1,0 +1,47 @@
+Karthick decided to go to his friend's home. He has reached his friend's home Street. In that place, lots of buildings are there. Then he started to search for his friend's home. He forgot the door number. But he knows the address very well. Finally, he found his friend's home. He wants to know the door number of his friend's home address. Could you please tell me how did he find the door number of his friend's home?
+
+Input Format
+
+Input consists of number of buildings in that street and Door numbers for the each home. Karthick friend's home address.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+If he found the home addrress after that returns the door number. If he not found the home,Return the value -1.
+
+Sample Input 0
+
+5
+7 9 5 3 2
+5
+Sample Output 0
+
+Door Number is 002-DN
+Sample Input 1
+
+7
+8 6 5 3 2 1 7
+2
+Sample Output 1
+
+Door Number is 004-DN
+Sample Input 2
+
+4
+8 9 6 4
+0
+Sample Output 2
+
+-1
+
+n = int(input().strip())                 
+doors = list(map(int, input().split()))  
+target = int(input().strip())            
+if target in doors:
+    pos = doors.index(target)       
+    print(f"Door Number is {pos:03d}-DN")
+else:
+    print("-1")
