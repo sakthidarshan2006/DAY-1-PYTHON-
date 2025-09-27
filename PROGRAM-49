@@ -1,0 +1,49 @@
+Geetha wants the know the best leaders in the given list.There is some condition to find the best leaders. Each leader has a score on their performance. Just take the score of the leader in reverse order and take the first score that compare with the other one who has the maximum score of the first one. Now take the current maximum score as the best leader score same as compared with the others.
+
+Explanation: arr={16,17,4,7,3,5,2} First take the last element from the list 2,When taking the score of 2 that compare with other,5 is the maximum of 2 Now the current maximum of score is 5,When taking the score of 5 that compare with other,7 is maximum of 5. Now the current maximum of score is 7,when taking the score of 7 that compare with other,17 is maximum of 7.
+
+Then finally the best Leader scores are {2,5,7,17}
+
+Input Format
+
+First Input corresponds as no of leaders. Second input corresponds as score of the each leader.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Find the best leaders score.
+
+Sample Input 0
+
+7
+16 17 7 4 5 3 2
+Sample Output 0
+
+The Best Leaders are 2 3 5 7 17
+Sample Input 1
+
+7
+1 9 5 3 6 2 4
+Sample Output 1
+
+The Best Leaders are 4 6 9
+Sample Input 2
+
+6
+6 3 1 4 7 8 
+Sample Output 2
+
+The Best Leaders are 8
+
+n = int(input())
+arr = list(map(int, input().split()))
+leaders = []
+max_right = -1
+for i in range(n-1, -1, -1):
+    if arr[i] > max_right:
+        leaders.append(arr[i])
+        max_right = arr[i]
+print("The Best Leaders are", " ".join(map(str, leaders)))
