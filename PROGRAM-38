@@ -1,0 +1,74 @@
+Write a program to execute the Pattern.
+
+Input Format
+
+Input consists single Integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the Pattern.
+
+Sample Input 0
+
+3
+Sample Output 0
+
+  *
+ * *
+*   *
+ * *
+  *
+Sample Input 1
+
+5
+Sample Output 1
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+Sample Input 2
+
+8
+Sample Output 2
+
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *
+
+n = int(input())
+for i in range(n):
+    spaces_before = n - i - 1
+    spaces_between = 2 * i - 1
+    if i == 0:
+        print(' ' * spaces_before + '*')
+    else:
+        print(' ' * spaces_before + '*' + ' ' * spaces_between + '*')
+for i in range(n - 2, -1, -1):
+    spaces_before = n - i - 1
+    spaces_between = 2 * i - 1
+    if i == 0:
+        print(' ' * spaces_before + '*')
+    else:
+        print(' ' * spaces_before + '*' + ' ' * spaces_between + '*')
