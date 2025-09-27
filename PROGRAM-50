@@ -1,0 +1,50 @@
+Write a program to count the number of even and odd elements in an array.
+
+Input Format
+
+Input consists of 1 integer and 1 array.
+
+Integer corresponds to the size of the array.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+The output consists of integers
+
+Sample Input 0
+
+3
+1
+2
+3
+Sample Output 0
+
+Odd: 2
+Even: 1
+Sample Input 1
+
+5
+1
+21
+3
+7
+46
+Sample Output 1
+
+Odd: 4
+Even: 1
+
+n = int(input())
+even_count = 0
+odd_count = 0
+for i in range(n):
+    num = int(input())
+    if num % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+print("Odd:", odd_count)
+print("Even:", even_count)
